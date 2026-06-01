@@ -28,12 +28,9 @@ Six components used: Demographics, Blood Pressure Exam, Blood Pressure Questionn
 - Survey weights not applied (appropriate for portfolio use; noted as simplification)
 
 ## Repository Structure
-├── Notebooks/
-│   ├── 01_load_and_merge.ipynb
-│   └── 02_exploratory_analysis.ipynb
-├── Data/
-│   └── nhanes_clean.csv
-└── README.md
+- `Notebooks/01_load_and_merge.ipynb` — data loading, merging, and cleaning
+- `Notebooks/02_exploratory_analysis.ipynb` — exploratory plots and visualizations
+- `Data/nhanes_clean.csv` — cleaned dataset (5,999 adult participants)
 
 ## How to Run
 1. Clone this repository

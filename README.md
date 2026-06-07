@@ -41,6 +41,9 @@ Six interaction terms were tested. Notable findings:
 - Six interaction models tested with mean-centered variables to reduce multicollinearity
 - All analysis conducted in Python using statsmodels
 
+## SQL Layer
+- SQL analysis conducted in DuckDB, replicating key EDA queries and interaction findings — see `sql/` folder
+
 ## Limitations
 - Cross-sectional design: cannot establish causality or direction of effect
 - Sleep is self-reported, which introduces measurement error

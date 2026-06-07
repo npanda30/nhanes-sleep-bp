@@ -22,6 +22,25 @@ Six components used: Demographics, Blood Pressure Exam, Blood Pressure Questionn
 - Systolic BP increases markedly with age, especially after 45
 - The sleep-BP relationship appears to vary by age group (in progress)
 
+### Linear Regression (Outcome: Systolic BP)
+Sleep duration was not a significant predictor of systolic BP after controlling for age, sex, and BMI (β=0.10, p=0.499). Age was the strongest predictor (β=0.40 per year, p<0.001). Females had significantly lower systolic BP than males (β=-4.82 mmHg, p<0.001). Model assumptions of homoscedasticity and normality were violated; results refit with HC3 robust standard errors with no change in conclusions.
+
+### Logistic Regression (Outcome: Hypertension Diagnosis)
+Sleep duration did not significantly predict hypertension diagnosis (OR=0.990, p=0.597). Each additional year of age increased odds of hypertension by 6.4% (OR=1.064, p<0.001). Females had 17.3% lower odds of hypertension than males (OR=0.827, p=0.002). Each BMI unit increase raised odds by 8.3% (OR=1.083, p<0.001).
+
+### Interaction Models
+Six interaction terms were tested. Notable findings:
+- **sleep × sex** (p=0.025): The sleep-BP relationship differs by sex — more sleep is weakly protective for males but not females
+- **age × sex** (p<0.001): The female cardiovascular advantage diminishes with age, consistent with loss of estrogen protection post-menopause. This was the strongest secondary finding (ΔR²=+0.016)
+- **age × bmi** (p=0.001): BMI's effect on BP weakens in older adults
+- sleep × age, sleep × bmi, and bmi × sex were not significant
+
+## Methods
+- Linear regression (OLS) with HC3 robust standard errors
+- Binary logistic regression with odds ratio interpretation
+- Six interaction models tested with mean-centered variables to reduce multicollinearity
+- All analysis conducted in Python using statsmodels
+
 ## Limitations
 - Cross-sectional design: cannot establish causality or direction of effect
 - Sleep is self-reported, which introduces measurement error
